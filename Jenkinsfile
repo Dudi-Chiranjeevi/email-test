@@ -6,7 +6,7 @@ pipeline {
         PYTHON_SCRIPT_LOAD = 'scripts\\load_csv_to_gcp.py'
         PYTHON_SCRIPT_SUMMARY = 'scripts\\generate_summary.py'
         SUMMARY_FILE = 'summary.doc'
-        EMAIL_RECIPIENT = 'chiranjeevidudi3005@gmail.com'
+        EMAIL_RECIPIENT = 'gogulateja92@gmail.com'
     }
 
     stages {
@@ -59,7 +59,7 @@ Data has been successfully migrated to the SQL Server.
 Please find the attached summary report for details.
 """,
                         to: "${env.EMAIL_RECIPIENT}",
-                        from: 'chiranjeevidudi3005@gmail.com',
+                        from: 'gogulateja92@gmail.com',
                         attachmentsPattern: "${env.SUMMARY_FILE}"
                     )
                 }
@@ -70,7 +70,7 @@ Please find the attached summary report for details.
     post {
         failure {
             emailext (
-                to: "gogulanavateja10@gmail.com",
+                to: "gogulateja92@gmail.com",
                 from: 'gogulateja92@gmail.com',
                 subject: "❌ GCP Upload Pipeline FAILED",
                 body: """\
