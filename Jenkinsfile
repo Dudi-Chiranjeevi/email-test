@@ -6,7 +6,7 @@ pipeline {
         PYTHON_SCRIPT_LOAD = 'scripts\\load_csv_to_gcp.py'
         PYTHON_SCRIPT_SUMMARY = 'scripts\\generate_summary.py'
         SUMMARY_FILE = 'summary.doc'
-        EMAIL_RECIPIENT = 'gogulanavateja10@gmail.com'
+        EMAIL_RECIPIENT = 'srikarvanaparthy21@gmail.com'
     }
 
     stages {
@@ -70,7 +70,7 @@ Please find the attached summary report for details.
     post {
         failure {
             emailext (
-                to: "gogulanavateja10@gmail.com",
+                to: "srikarvanaparthy21@gmail.com",
                 from: 'chiranjeevidudi3005@gmail.com',
                 subject: "❌ GCP Upload Pipeline FAILED",
                 body: """\
