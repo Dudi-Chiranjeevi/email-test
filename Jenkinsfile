@@ -59,7 +59,7 @@ Data has been successfully migrated to the SQL Server.
 Please find the attached summary report for details.
 """,
                         to: "${env.EMAIL_RECIPIENT}",
-                        from: 'gogulateja92@gmail.com',
+                        from: 'chiranjeevidudi3005@gmail.com',
                         attachmentsPattern: "${env.SUMMARY_FILE}"
                     )
                 }
@@ -71,7 +71,7 @@ Please find the attached summary report for details.
         failure {
             emailext (
                 to: "gogulanavateja10@gmail.com",
-                from: 'gogulateja92@gmail.com',
+                from: 'chiranjeevidudi3005@gmail.com',
                 subject: "❌ GCP Upload Pipeline FAILED",
                 body: """\
 The Jenkins job has failed.
