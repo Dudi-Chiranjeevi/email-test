@@ -6,13 +6,13 @@ pipeline {
         PYTHON_SCRIPT_LOAD = 'scripts\\load_csv_to_gcp.py'
         PYTHON_SCRIPT_SUMMARY = 'scripts\\generate_summary.py'
         SUMMARY_FILE = 'summary.doc'
-        EMAIL_RECIPIENT = 'gogulanavateja10@gmail.com'
+        EMAIL_RECIPIENT = 'chiranjeevidudi3005@gmail.com'
     }
 
     stages {
         stage('Checkout Repository') {
             steps {
-                git url: 'https://github.com/Navateja-gogula/Jenkins-Usecase2.git', branch: 'main'
+                git url: 'https://github.com/Dudi-Chiranjeevi/email-test.git', branch: 'main'
             }
         }
 
@@ -59,7 +59,7 @@ Data has been successfully migrated to the SQL Server.
 Please find the attached summary report for details.
 """,
                         to: "${env.EMAIL_RECIPIENT}",
-                        from: 'gogulateja92@gmail.com',
+                        from: 'chiranjeevidudi3005@gmail.com',
                         attachmentsPattern: "${env.SUMMARY_FILE}"
                     )
                 }
